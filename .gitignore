@@ -1,0 +1,15 @@
+
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+*.log
+
+# Ignore large model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Keep results and training history
+!results/*.json

@@ -1,0 +1,219 @@
+Hello, I am building MiniGPT.
+MiniGPT is a small Transformer language model.
+This project teaches how Transformers work from the inside.
+Machine learning is about learning patterns from data.
+Deep learning uses neural networks to learn useful representations.
+Artificial intelligence is changing the way we solve problems.
+Transformers are powerful models for understanding sequences.
+Self attention allows a model to focus on important parts of the input.
+Neural networks are computational models inspired by biological systems.
+A neural network contains layers of connected mathematical operations.
+Training adjusts the parameters of the network to reduce prediction error.
+Optimization algorithms help neural networks learn from examples.
+The Transformer architecture uses attention to process sequences efficiently.
+Attention allows each token to interact with other tokens in the sequence.
+Large language models are trained on large collections of text.
+A language model predicts the probability of the next token.
+Evaluation helps researchers understand whether a model generalizes.
+A model that performs well only on training data may be overfitting.
+Good machine learning experiments require careful measurement.
+Researchers compare models using consistent datasets and evaluation metrics.
+Hyperparameters such as learning rate and model size affect performance.
+Increasing model capacity can improve performance but may also increase cost.
+Experiments should be reproducible and clearly documented.Artificial intelligence is the field of computer science concerned with building systems that can perform tasks that normally require human intelligence. These tasks include reasoning, learning, planning, perception, language understanding, and decision making. Artificial intelligence systems can use rules, statistical methods, machine learning models, or combinations of these techniques.
+
+Machine learning is a branch of artificial intelligence in which algorithms learn patterns from data. Instead of explicitly programming every rule, a machine learning system uses examples to estimate useful parameters. The learned parameters are then used to make predictions on new data. A machine learning workflow commonly includes data collection, preprocessing, model selection, training, evaluation, and deployment.
+
+Supervised learning uses labeled examples. A model receives an input and a target output and learns a mapping between them. Classification predicts discrete categories such as spam or not spam. Regression predicts continuous values such as temperature, price, or demand. Common supervised learning algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines, and neural networks.
+
+Unsupervised learning works with data that does not have explicit labels. The goal may be to discover hidden structure or useful representations. Clustering groups similar observations together. Dimensionality reduction transforms high dimensional data into a smaller representation while trying to preserve important information. Principal component analysis is one classical method for dimensionality reduction.
+
+Deep learning uses neural networks with multiple layers of learned representations. Each layer transforms its input into a new representation. Early layers may learn simple features while deeper layers can learn increasingly abstract patterns. Deep neural networks have become important in computer vision, speech processing, natural language processing, recommendation systems, and scientific computing.
+
+A neural network is composed of interconnected mathematical operations. A typical layer applies a linear transformation followed by a nonlinear activation function. The parameters of the network are adjusted during training to reduce a loss function. Gradient descent and its variants are widely used to optimize neural networks.
+
+The forward pass computes predictions from the input. The loss function measures the difference between predictions and target values. Backpropagation calculates gradients of the loss with respect to model parameters. The optimizer uses these gradients to update the parameters. This process is repeated over many batches and epochs.
+
+The learning rate controls the size of parameter updates. A learning rate that is too large can make training unstable, while a learning rate that is too small can make optimization slow. Adam and AdamW are popular optimization algorithms for deep learning. Hyperparameters should be selected carefully and evaluated using validation data.
+
+Training data is used to fit model parameters. Validation data is used to monitor generalization and select hyperparameters. A separate test set can be used for final evaluation. If a model performs very well on training data but poorly on unseen data, it may be overfitting. Regularization, more data, simpler models, and other techniques can help improve generalization.
+
+Loss functions depend on the task. Mean squared error is commonly used for regression. Cross entropy is commonly used for classification and language modeling. In language modeling, the model predicts a probability distribution over possible next tokens.
+
+Natural language processing focuses on computational methods for human language. Modern language models represent text as sequences of tokens. Tokens can be characters, words, or subword units. Tokenization converts text into a sequence that a model can process numerically.
+
+Embeddings map discrete tokens into continuous vectors. Similar tokens can learn related representations. These vectors allow neural networks to operate on textual information using mathematical operations.
+
+Transformers are neural network architectures designed for processing sequences. They rely heavily on attention mechanisms instead of recurrence. The Transformer architecture contains attention layers, feed forward networks, normalization, and residual connections.
+
+Self attention allows each token to examine other tokens in the sequence and determine which information is useful. For each token, the model produces a query vector, a key vector, and a value vector. Query and key vectors are compared to produce attention scores. The scores are scaled and normalized with softmax. The resulting weights are used to combine value vectors.
+
+The scaled dot product attention operation can be expressed as attention equals softmax of query multiplied by the transpose of key divided by the square root of the key dimension, multiplied by value. This mechanism allows a model to capture relationships between tokens even when they are far apart in a sequence.
+
+Multi head attention uses several attention mechanisms in parallel. Different heads can learn different relationships or patterns. Their outputs are combined and projected into the model representation space. The number of heads is an important architectural hyperparameter.
+
+Transformers also use positional information because attention alone does not inherently represent token order. Positional encodings provide information about where a token occurs in a sequence. Different positional encoding strategies can be used in Transformer architectures.
+
+A Transformer block usually contains a self attention sublayer and a feed forward sublayer. Residual connections help information flow through the network. Layer normalization improves the stability of training. Dropout can reduce overfitting.
+
+Autoregressive language models generate text one token at a time. At every step, the model predicts the probability distribution for the next token based only on the available context. The predicted token is appended to the sequence and the process continues.
+
+Causal attention masking ensures that a token cannot attend to future tokens during autoregressive training. The attention matrix therefore has a triangular structure. This prevents the model from using information that would not be available when generating text.
+
+Sampling strategies affect generated text. Temperature changes the sharpness of the probability distribution. A low temperature makes the model more predictable, while a higher temperature increases randomness. Top k sampling restricts the candidate tokens to the k most probable choices.
+
+Model evaluation is an essential part of machine learning research. A single metric is rarely enough to understand model behavior. Researchers may examine loss, accuracy, precision, recall, F1 score, perplexity, latency, memory usage, and computational cost.
+
+Perplexity is a common metric for language models. It is related to the exponential of the average negative log likelihood. Lower perplexity generally indicates that the model assigns higher probability to the observed sequence.
+
+An experiment should change one important factor at a time whenever possible. Controlled experiments make it easier to understand cause and effect. Ablation studies remove or modify components to measure their contribution to the final result.
+
+Model capacity refers to the ability of a model to represent complex functions. Increasing the embedding dimension, number of layers, or number of attention heads can increase capacity. However, larger models can require more computation and may overfit small datasets.
+
+Dataset size has a major effect on machine learning performance. More diverse training examples can help a model learn patterns that generalize better. A model trained on a tiny repetitive corpus may memorize examples instead of learning broad language structure.
+
+Data quality is also important. Training text should be relevant, diverse, and reasonably clean. Duplicate or noisy examples can affect learning. Good preprocessing can improve both training efficiency and model quality.
+
+Reproducible experiments record the dataset, model configuration, random seed, optimizer, learning rate, number of epochs, and evaluation metrics. Researchers should report both successful and unsuccessful experiments when they provide useful information.
+
+Visualization can help researchers understand optimization. Training and validation loss curves can reveal learning progress and overfitting. Comparing experiments with tables and graphs can make conclusions easier to communicate.
+
+Computer vision is another major area of deep learning. Convolutional neural networks can learn visual features from images. More recent vision models can use attention and Transformer architectures to model image patches.
+
+Reinforcement learning studies how an agent learns through interaction with an environment. The agent takes actions, receives rewards, and tries to maximize long term cumulative reward. Policy optimization, value estimation, and exploration are important concepts in reinforcement learning.
+
+AI research often involves a cycle of hypothesis, implementation, experiment, evaluation, and refinement. Strong machine learning systems are not created only by writing code. Researchers also need to understand the data, choose suitable metrics, analyze errors, and communicate findings clearly.
+
+A strong machine learning project should explain the problem being solved, the dataset being used, the model architecture, the training procedure, the evaluation methodology, and the experimental findings. Clear documentation helps others reproduce and extend the work.
+
+MiniGPT is a small educational Transformer language model. Its purpose is to demonstrate how tokenization, embeddings, positional encoding, self attention, causal masking, feed forward layers, optimization, and autoregressive generation work together.
+
+The MiniGPT experiments examine how architecture and sampling choices influence model behavior. Training loss and validation loss are monitored during optimization. Perplexity provides another measure of language modeling performance. Ablation experiments compare different numbers of attention heads.
+
+A research oriented machine learning workflow should prioritize measurement over assumptions. If a larger model does not improve validation performance, the result is still informative. If a lower temperature improves coherence, the result can motivate further experiments.
+
+The ultimate goal of machine learning is not simply to minimize training error. A useful model should generalize to relevant unseen examples, operate within practical computational limits, and behave reliably under expected conditions.
+
+Artificial Intelligence and Machine Learning
+
+Artificial intelligence enables computers to perform tasks such
+as learning, reasoning, prediction, and pattern recognition.
+
+Machine learning is a branch of artificial intelligence. It uses
+data to learn patterns and make predictions. A machine learning
+workflow includes data collection, preprocessing, model training,
+evaluation, and deployment.
+
+Supervised learning uses labeled data. Classification predicts
+categories, while regression predicts numerical values.
+
+Unsupervised learning discovers patterns in unlabeled data.
+Clustering groups similar examples. Dimensionality reduction
+represents data with fewer features.
+
+Training data helps a model learn. Validation data helps select
+model settings. Test data measures performance on unseen examples.
+Data leakage happens when information that should not be available
+during prediction influences the training process.
+
+Neural Networks
+
+A neural network contains connected computational units called
+neurons. A basic network has input, hidden, and output layers.
+Weights and biases are learned during training.
+
+Activation functions introduce nonlinearity. Common examples
+include ReLU, sigmoid, and tanh.
+
+Backpropagation calculates gradients of the loss function.
+An optimizer uses those gradients to update model parameters.
+The learning rate controls the size of parameter updates.
+
+Overfitting occurs when a model learns training examples too
+closely and performs poorly on unseen data. Dropout, weight decay,
+early stopping, and better training data may help reduce it.
+
+Natural Language Processing
+
+Natural language processing enables computers to process text.
+Applications include text classification, translation,
+summarization, question answering, and text generation.
+
+Tokenization divides text into smaller units called tokens.
+A character-level tokenizer uses individual characters as tokens.
+An embedding converts a token identifier into a vector.
+
+A language model learns patterns in sequences of tokens.
+An autoregressive language model predicts the next token using
+the preceding context. It can generate text by repeatedly
+predicting and adding new tokens.
+
+Transformer Architecture
+
+A Transformer uses attention to model relationships between
+tokens. Self-attention combines information from different
+positions in a sequence.
+
+Attention uses queries, keys, and values. Query and key
+similarities determine attention weights. These weights combine
+value vectors into contextual representations.
+
+Multi-head attention uses several attention heads. Each head
+can learn different relationships between tokens.
+
+Positional information helps the model represent token order.
+Residual connections help information flow through the network.
+Layer normalization helps stabilize training.
+
+A causal mask prevents a language model from using future tokens
+when predicting the next token.
+
+Model Training and Evaluation
+
+Cross-entropy loss measures how well predicted probabilities
+match the correct next token. Lower loss generally indicates
+better predictions on the same evaluation dataset.
+
+Perplexity is the exponential of average cross-entropy loss
+when natural logarithms are used. Lower perplexity generally
+indicates better next-token prediction on the same dataset.
+
+An epoch is one pass through the training dataset. Batch size
+controls how many examples are processed in an update.
+The learning rate controls the magnitude of optimizer updates.
+
+Training loss and validation loss should both be monitored.
+A model with low training loss but high validation loss may
+be overfitting.
+
+Text Generation
+
+Greedy decoding selects the most probable next token.
+Sampling selects a token using its predicted probability.
+Temperature changes the sharpness of the probability distribution.
+Top-k sampling restricts choices to the k most probable tokens.
+
+A small language model may repeat phrases or produce grammatical
+errors. Results depend on training data, model size, optimization,
+and text-generation settings.
+
+Computer Vision
+
+Computer vision enables computers to analyze images and videos.
+A convolutional neural network uses filters to extract features.
+Stride controls filter movement, and padding controls border
+handling.
+
+A feature map contains the output of a filter. Pooling can reduce
+spatial dimensions. Fully connected layers combine features
+to produce predictions.
+
+Responsible Machine Learning
+
+Machine learning systems should be evaluated for accuracy,
+reliability, fairness, privacy, and security. Training data
+should be representative of the intended application.
+
+A small educational language model is useful for learning
+tokenization, attention, optimization, and text generation.
+It is not equivalent to a large-scale language model.
